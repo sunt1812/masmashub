@@ -1,0 +1,45 @@
+.team {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 36%;
+        height: 100%;
+        background: url("../../assets/images/team-bg1.png") center/cover no-repeat;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 40%;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        background: url("../../assets/images/team-bg2.png") center/cover no-repeat;
+    }
+    &__container {
+        grid-template-columns: repeat(3,1fr );
+        gap: 4.5rem;
+    }
+    &__title {
+        margin-top: 3rem;
+    }
+    &__title,
+    &__desc {
+        margin-left: 3rem;
+    }
+}
+
+// =================== responsize mobile ================
+@include mobile {
+    .team {
+        &::after,
+        &::before {
+            display: none;
+        }
+        &__container {
+            grid-template-columns: 100%;
+        }
+    }
+}

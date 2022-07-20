@@ -1,0 +1,40 @@
+.testimonial {
+    max-width: 77rem;
+    background-color: var(--primary-color);
+    opacity: .2;
+    border-radius: 2.4rem;
+    padding: 9rem 8rem;
+    box-shadow: var(--box-shadow);
+    margin: 1rem 0 7rem;
+    &__body {
+        @include flexCenter(center);
+        gap: 2rem;
+    }
+    &__avatar {
+        width: 7rem;
+    }
+}
+.swiper-slide-active {
+    background-color: var(--white-color);
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
+    width: 2rem;
+    height: .8rem;
+    border-radius: 2.5rem;
+}
+
+// =================== responsize tablet ================
+@include tablet {
+    .testimonial {
+        max-width: 70%;
+    }
+}
+
+// =================== responsize mobile ================
+@include mobile {
+    .testimonial {
+        padding: 4rem;
+    }
+}

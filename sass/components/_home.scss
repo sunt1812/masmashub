@@ -1,0 +1,68 @@
+.home {
+    position: relative;
+    padding-bottom: 8rem;
+    &__container {
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+    }
+    &__bg-birds {
+        position: absolute;
+        top: 0;
+        left: 30%;
+        width: 12rem;
+    }
+    &__desc {
+       margin: 2.4rem 0 8rem;
+       padding-right: 4rem;
+    }
+    &__cta {
+        @include flexCenter(center);
+        gap: 2rem;
+    }
+}
+
+// =================== responsize tablet ================
+@include tablet {
+    .home {
+        padding-bottom: 6rem;
+        &__desc {
+           margin: 2.4rem 0 ;
+           padding-right: 6rem;
+        }
+        &__cta {
+            @include flexCenter(center);
+            gap: 1rem;
+        }
+        &__video {
+            width: 5rem;
+        }
+    }
+}
+
+// =================== responsize mobile ================
+@include mobile {
+    .home {
+        &__container {
+            grid-template-columns: 100%;
+            gap: 4rem;
+        }
+        &__bg-birds {
+            display: none;
+        }
+        &__info {
+            text-align: center;
+        }
+        &__desc {
+            padding: unset;
+        }
+        &__cta {
+            justify-content: center;
+        }
+        &__images {
+            justify-self: center;
+            img {
+                width: 40rem;
+            }
+        }
+    }
+}

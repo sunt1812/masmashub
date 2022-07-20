@@ -1,0 +1,75 @@
+.nav {
+    height: 10rem;
+    @include flex(center,space-between);
+    &__logo {
+        width: 25rem;
+    }
+    &__menu {
+        @include flexCenter(center);
+        gap: 6rem;
+        & > .active {
+            color: var(--primary-color);
+        }
+    }
+    &__link {
+        color: var(--gray-color);
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+    .btn {
+        color: var(--white-color);
+    }
+    &__close,
+    &__toggle {
+        font-size: 2rem;
+        display: none;
+    }
+}
+
+//  =========== responesize tablet ============
+@include tablet {
+    .nav {
+        &__logo {
+            width: 15rem;
+        }
+        &__menu {
+            gap: 4rem;
+        }     
+    }
+}
+//  =========== responesize mobile ============
+@include mobile {
+    .nav {
+        &__menu {
+            position: fixed;
+            background-color: var(--white-color);
+            width: 80%;
+            height: 100%;
+            top: 0;
+            right: -100%;
+            box-shadow: -2px 0 4px hsla(var(--hue), 24%, 15%, .1);
+            padding: 4rem 0 0 3rem;
+            border-radius: 1rem 0 0 1rem;
+            transition: .3s;
+            z-index: 999;
+            flex-direction: column;
+            transition: all .6s ease;
+        }
+        &__close,  
+        &__toggle {
+            display: block;
+        }
+        &__close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+        }  
+    }
+}
+
+/* Show menu */
+.show-menu{
+    right: 0;
+    transition: all .5s ease;
+}

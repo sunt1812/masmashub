@@ -1,0 +1,44 @@
+.newsletter {
+    background-color: var(--primary-color);
+    &__container {
+        position: relative;
+        padding: 6rem 0;
+        grid-template-columns: .45fr;
+        justify-content: center;
+    }
+    &__title,
+    &__desc {
+        color: var(--white-color);
+    }
+    &__subcriber {
+        margin-top: 3rem;
+        @include flexCenter(center);
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid #FFFFFF;
+        border-radius: 1.5rem;
+       input {
+           width: 70%;
+           outline: 0;
+           border: 0;
+           padding: 1rem;
+           background-color: transparent;
+           &::placeholder {
+               color: var(--white-color);
+               opacity: 0.7;
+           }
+       }
+    }
+    .btn {
+        border-top-left-radius: unset;
+        border-bottom-left-radius: unset;
+    }
+}
+
+// =================== responsize mobile ================
+@include mobile {
+    .newsletter {
+        &__container {
+            grid-template-columns: .8fr;
+        }
+    }
+}

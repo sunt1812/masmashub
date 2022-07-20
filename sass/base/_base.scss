@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../../assets/webfont/CircularStd-Medium.woff2') format('woff2'),
+        url('../../assets/webfont/CircularStd-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Circular Std';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    font-size: var(--p-font-size-small);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}

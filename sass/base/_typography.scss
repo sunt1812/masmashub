@@ -1,0 +1,81 @@
+
+  h2,h4 {
+    color: var(--title-color);
+  }
+  h1,
+  h3,
+  h5,
+  h6 {
+    color: var(--black-color);
+    font-weight: 700;
+  }
+  
+  h1 {
+    font-size: var(--h1-font-size);
+    line-height: 7.2rem;
+    @include tablet {
+      line-height: 4rem;
+    }
+  }
+  
+  h2 {
+    font-size: var(--h2-font-size);
+  }
+  
+  h3 {
+    font-size: var(--h3-font-size);
+  }
+  
+  h4 {
+    font-size: var(--h4-font-size);
+  }
+  
+  h5 {
+    font-size: var(--h5-font-size);
+  }
+  
+  h6 {
+    font-size: var(--h6-font-size);
+  }
+  
+  p {
+    color: var(--black-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.6;
+  }
+  
+  @keyframes circle {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    60%{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    70%{
+        transform: scale(1);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: scale(1)
+    }
+    }
+    
+    @keyframes scales {
+    0%{
+        transform: scale(0.3)
+    }
+    30%{
+        transform: scale(1.2)
+    }
+    60%{
+        transform: scale(0.9)
+    }
+    100%{
+        transform: scale(1)
+    }
+    }
+  

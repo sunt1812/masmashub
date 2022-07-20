@@ -1,0 +1,51 @@
+.features {
+    background-color: var(--primary-color);
+    padding: 8rem 12rem;
+    position: relative;
+    &__title {
+        color: var(--white-color);
+    }
+    &__content {
+        grid-template-columns: repeat(3,1fr);
+        gap: 3rem;
+        align-items: center;
+    }
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 36%;
+    }
+}
+.feature {
+    margin-top: 6rem;
+    &__desc,
+    &__title {
+        color: var(--white-color);
+        margin-top: 1rem;
+    }
+    &__desc {
+        opacity: 0.7;
+    }
+}
+// =================== responsize tablet ================
+@include tablet {
+    .features {
+        padding: 6rem;
+    }
+}
+
+// =================== responsize mobile ================
+@include mobile {
+    .features {
+        padding: 4rem;
+        &__content {
+            grid-template-columns: 100%;
+            gap: 0;
+        }
+        &__img {
+            position: unset;
+            width: 100%;
+        }
+    }
+}

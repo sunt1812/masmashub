@@ -1,0 +1,55 @@
+.pricing {
+    &__container {
+        grid-template-columns: repeat(3,1fr);
+        gap: 4rem;
+    }
+    &-card {
+        position: relative;
+        background-color: var(--white-color);
+        border-radius: 1.5rem;
+        box-shadow: var(--box-shadow);
+        padding: 7rem 5.6rem;
+        text-align: center;
+        transition: all .4s ease;
+        &__icon {
+            width: 12rem;
+            margin: 0 auto;
+            margin-bottom: 3.6rem;
+        }
+        &__number {
+            font-size: var(--h2-font-size);
+            color: var(--primary-color);
+            font-weight: 400;
+            span {
+                font-size: 1.4rem;
+            }
+        }
+        &:hover {
+            @media screen and (min-width:767px) {
+                background-color: var(--primary-color);
+                margin-top: -5rem;
+                .pricing-card__title,
+                .pricing-card__number,
+                .pricing-card__desc {
+                    color: var(--white-color);
+                }
+            }
+        }
+    }
+}
+
+// =================== responsize tablet ================
+@include tablet {
+    .pricing-card {
+        padding: 4rem 2.6rem;
+    }
+}
+
+// =================== responsize mobile ================
+@include mobile {
+    .pricing {
+        &__container {
+            grid-template-columns: 100%;
+        }
+    }
+}

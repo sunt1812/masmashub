@@ -1,0 +1,72 @@
+.footer {
+    padding: 6rem 0 0;
+    &__container {
+        @include flexCenter(center);
+        gap: 12rem;
+        margin-bottom: 3rem;
+    }
+    &__logo {
+        img {
+            margin-bottom: 2.1rem;
+            width: 25rem;
+        }
+    }
+    &__item:last-child {
+        margin-left: auto;
+    }
+    &__subtitle {
+        font-size: var(--p-font-size);
+    }
+    &__socials {
+        @include flexCenter(center);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .list {
+        @include flex(center,space-between);
+        gap: 9.6rem;
+        &__link {
+            display: block;
+            color: var(--black-color);
+        }
+    }
+    &__copyrite {
+        text-align: center;
+        padding: 4rem 0;
+        color: rgba(39, 49, 80, 0.5);
+        border-top: 1px solid #D6D6D6;
+    }
+}
+
+// =================== responsize tablet ================
+@include tablet {
+    .footer {
+        &__container {
+            gap: 9rem;
+        }
+        &__logo {
+            img {
+                width: 20rem;
+            }
+        }
+        &__socials {
+            gap: 1rem;
+        }
+        .list {
+            gap: 7rem;
+        }
+    }
+}
+
+// =================== responsize mobile ================
+@include mobile {
+    .footer {
+        &__container {
+            flex-direction: column;
+            gap: 4rem;
+        }
+        &__item:last-child {
+            margin-left: unset;
+        }
+    }
+}
